@@ -1,4 +1,6 @@
 ---
+import Link from '../components/Link.astro';
+
 export interface Props {
   title: string;
 }
@@ -14,27 +16,30 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <slot />
+  <body class="max-w-4xl mx-auto flex flex-col min-h-[100dvh] px-4">
+    <header class="flex gap-4 py-4 sticky top-0 bg-white">
+      <Link href="/">/index</Link>
+      <Link href="/blogs" />
+      <Link href="/about" />
+    </header>
+    <main class="grow">
+      <slot />
+    </main>
+    <footer class="text-center text-gray-300 py-2">
+      2020-{new Date().getFullYear()} &copy; Justin Sun
+    </footer>
   </body>
 </html>
+
 <style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  * {
+    font-family: 'Poppins', sans-serif;
   }
 </style>
