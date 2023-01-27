@@ -6,6 +6,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.49.0
   '@typescript-eslint/parser': ^5.49.0
   astro: ^2.0.1
+  clsx: ^1.2.1
   eslint: ^8.32.0
   eslint-config-prettier: ^8.6.0
   eslint-plugin-astro: ^0.23.0
@@ -13,6 +14,7 @@ specifiers:
   lint-staged: ^13.1.0
   prettier: ^2.8.3
   prettier-plugin-astro: ^0.7.2
+  remixicon: ^2.5.0
   simple-git-hooks: ^2.8.1
   tailwindcss: ^3.0.24
   typescript: ^4.9.4
@@ -20,6 +22,8 @@ specifiers:
 dependencies:
   '@astrojs/tailwind': 3.0.0_bgk6wvini4j5nfa7w2itosrqne
   astro: 2.0.1
+  clsx: 1.2.1
+  remixicon: 2.5.0
   tailwindcss: 3.2.4
 
 devDependencies:
@@ -1429,6 +1433,11 @@ packages:
   /clone/1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/1.9.3:
@@ -3374,6 +3383,10 @@ packages:
       retext: 8.1.0
       retext-smartypants: 5.2.0
       unist-util-visit: 4.1.2
+    dev: false
+
+  /remixicon/2.5.0:
+    resolution: {integrity: sha512-q54ra2QutYDZpuSnFjmeagmEiN9IMo56/zz5dDNitzKD23oFRw77cWo4TsrAdmdkPiEn8mxlrTqxnkujDbEGww==}
     dev: false
 
   /resolve-from/4.0.0:

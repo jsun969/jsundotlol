@@ -1,14 +1,18 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
+import clsx from 'clsx';
 
 type Props = HTMLAttributes<'a'>;
 const { ...attrs } = Astro.props;
 ---
 
 <a
-  class={Astro.url.pathname === attrs.href
-    ? 'text-black'
-    : 'text-gray-300 hover:text-black transition-colors'}
+  class={clsx(
+    Astro.url.pathname === attrs.href
+      ? 'text-black'
+      : 'text-gray-300 hover:text-black transition-colors',
+    attrs.class,
+  )}
   {...attrs}
 >
   {Astro.slots.has('default') ? <slot /> : attrs.href}
