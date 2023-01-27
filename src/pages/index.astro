@@ -4,10 +4,15 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Jsun Dot LOL">
   <h1 class="text-5xl sm:text-8xl text-center pt-[30vh]">
-    Jsun Dot {
-      ['L', 'l'][Math.round(Math.random())] +
-        ['O', 'o'][Math.round(Math.random())] +
-        ['L', 'l'][Math.round(Math.random())]
-    }
+    Jsun Dot
+    <span
+      class="font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-[#ff5ef7] to-[#02f5ff]"
+    >
+      {
+        ['L', 'l'][Math.round(Math.random())] +
+          ['O', 'o'][Math.round(Math.random())] +
+          ['L', 'l'][Math.round(Math.random())]
+      }
+    </span>
   </h1>
 </Layout>
