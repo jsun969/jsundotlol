@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const {
+  post: { data },
+} = Astro.props;
+---
+
+<a class="group cursor-pointer block w-fit mb-4">
+  <div class="text-2xl">
+    <span
+      class="text-gray-200 font-light mr-4 group-hover:text-gray-600 transition-colors"
+    >
+      {data.date.toLocaleDateString('en', { month: 'short', day: 'numeric' })}
+    </span>
+    <span class="text-gray-500 group-hover:text-black transition-colors">
+      {data.title}
+    </span>
+  </div>
+  <div class="text-gray-400 group-hover:text-gray-800 transition-colors">
+    {
+      data.language === 'zh-cn' && (
+        <span class="text-xs text-white bg-gray-400 group-hover:bg-gray-800 pl-[3px] mr-2">
+          CHINESE
+        </span>
+      )
+    }
+    {data.tags.join(' · ')}
+  </div>
+</a>

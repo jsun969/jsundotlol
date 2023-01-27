@@ -1,5 +1,26 @@
 ---
+import { getCollection } from 'astro:content';
+
+import BlogItem from '../components/BlogItem.astro';
 import Layout from '../layouts/Layout.astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
 ---
 
-<Layout title="Jsun Dot LOL - Blog">blog</Layout>
+<Layout title="Jsun Dot LOL - Blog">
+  {
+    posts.map((post, i) => (
+      <>
+        {post.data.date.getFullYear() <
+          (posts[i - 1]?.data.date.getFullYear() || 2077) && (
+          <div class="font-black text-gray-100 text-9xl mt-16 first:mt-0">
+            {post.data.date.getFullYear()}
+          </div>
+        )}
+        <BlogItem post={post} />
+      </>
+    ))
+  }
+</Layout>
