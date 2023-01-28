@@ -9,17 +9,14 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:astro/recommended',
   ],
-  ignorePatterns: ['*.cjs'],
+  ignorePatterns: ['*.cjs', 'env.d.ts', '.astro/*'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      { ignoreRestSiblings: true },
-    ],
-    '@typescript-eslint/consistent-type-imports': 'warn',
     '@typescript-eslint/no-non-null-assertion': 'off',
-    'no-console': 'error',
+    '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
+    '@typescript-eslint/consistent-type-imports': 'warn',
+    'no-console': 'warn',
   },
   overrides: [
     {
