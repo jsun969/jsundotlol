@@ -12,7 +12,7 @@ const { post } = Astro.props;
   <div class="text-2xl">
     <time
       datetime={post.data.date.toISOString()}
-      class="text-gray-200 font-light mr-4 group-hover:text-gray-600 transition-colors"
+      class="text-gray-400 font-light mr-4 group-hover:text-gray-800 dark:group-hover:text-gray-50 transition-colors"
     >
       {
         post.data.date.toLocaleDateString('en', {
@@ -21,18 +21,24 @@ const { post } = Astro.props;
         })
       }
     </time>
-    <span class="text-gray-500 group-hover:text-black transition-colors">
+    <span
+      class="text-gray-500 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white transition-colors"
+    >
       {post.data.title}
     </span>
   </div>
-  <div class="text-gray-400 group-hover:text-gray-800 transition-colors">
+  <div>
     {
       post.data.language === 'zh-cn' && (
-        <span class="text-xs text-white bg-gray-400 group-hover:bg-gray-800 pl-[3px] mr-2">
+        <span class="text-xs text-white dark:text-black bg-gray-400 group-hover:bg-gray-800 dark:group-hover:bg-gray-50 pl-[3px] mr-2 transition-colors">
           CHINESE
         </span>
       )
     }
-    {post.data.tags.join(' · ')}
+    <span
+      class="text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-50 transition-colors"
+    >
+      {post.data.tags.join(' · ')}
+    </span>
   </div>
 </a>

@@ -26,13 +26,15 @@ const ISODate = post.data.date.toISOString();
   description={post.data.description}
   article={{ tags: post.data.tags, date: ISODate }}
 >
-  <h1 class="text-center font-bold text-4xl">{post.data.title}</h1>
+  <h1 class="text-center font-bold text-4xl dark:text-white">
+    {post.data.title}
+  </h1>
   <div class="block text-center text-gray-400 mb-2 text-sm">
     <time datetime={ISODate}>{post.data.date.toDateString()}</time>
     <span> · {post.data.tags.join(' ')}</span>
   </div>
   <!-- TODO: Add links to headings -->
-  <article class="prose max-w-full">
+  <article class="prose dark:prose-invert max-w-full">
     <Content />
   </article>
 </Layout>

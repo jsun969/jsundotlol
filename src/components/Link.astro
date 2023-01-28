@@ -7,8 +7,8 @@ const { ...attrs } = Astro.props;
 
 <a
   class={Astro.url.pathname === attrs.href
-    ? 'text-black'
-    : 'text-gray-300 hover:text-black transition-colors'}
+    ? 'text-black dark:text-white'
+    : 'text-gray-400 hover:text-black dark:hover:text-white transition-colors'}
   {...attrs}
 >
   {Astro.slots.has('default') ? <slot /> : attrs.href}
