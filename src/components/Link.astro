@@ -1,6 +1,5 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import clsx from 'clsx';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 type Props = HTMLAttributes<'a'>;
@@ -8,12 +7,9 @@ const { ...attrs } = Astro.props;
 ---
 
 <a
-  class={clsx(
-    Astro.url.pathname === attrs.href
-      ? 'text-black'
-      : 'text-gray-300 hover:text-black transition-colors',
-    attrs.class,
-  )}
+  class={Astro.url.pathname === attrs.href
+    ? 'text-black'
+    : 'text-gray-300 hover:text-black transition-colors'}
   {...attrs}
 >
   {Astro.slots.has('default') ? <slot /> : attrs.href}
