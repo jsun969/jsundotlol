@@ -19,20 +19,12 @@ type Props = {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
-// TODO: Get plain text from markdown
-const description = post.body
-  .substring(0, 150)
-  .replaceAll('\n', ' ')
-  .replaceAll('#', '')
-  .replaceAll('```', '')
-  .trim();
-
 const ISODate = post.data.date.toISOString();
 ---
 
 <Layout
   title={post.data.title + ' - Jsun Blog'}
-  description={description}
+  description={post.data.description}
   article={{ tags: post.data.tags, date: ISODate }}
 >
   <h1 class="text-center font-bold text-3xl">{post.data.title}</h1>
