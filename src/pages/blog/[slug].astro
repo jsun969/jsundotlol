@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+
+import Layout from '../../layouts/Layout.astro';
+
+export const getStaticPaths = async () => {
+  const blogPosts = await getCollection('blog');
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type Props = {
+  post: CollectionEntry<'blog'>;
+};
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title + ' - Jsun Blog'}>
+  <h1 class="text-center font-bold text-3xl">{post.data.title}</h1>
+  <div class="text-center text-gray-400 mb-2 text-sm">
+    {post.data.date.toDateString()} ·
+    {post.data.tags.join(' ')}
+  </div>
+  <article class="prose max-w-full">
+    <Content />
+  </article>
+</Layout>
