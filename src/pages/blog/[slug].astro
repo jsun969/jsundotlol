@@ -12,8 +12,7 @@ export const getStaticPaths = async () => {
   }));
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-type Props = {
+export type Props = {
   post: CollectionEntry<'blog'>;
 };
 const { post } = Astro.props;
