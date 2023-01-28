@@ -11,7 +11,8 @@ const { post } = Astro.props;
 
 <a class="group cursor-pointer block w-fit mb-4" href={'/blog/' + post.slug}>
   <div class="text-2xl">
-    <span
+    <time
+      datetime={post.data.date.toISOString()}
       class="text-gray-200 font-light mr-4 group-hover:text-gray-600 transition-colors"
     >
       {
@@ -20,7 +21,7 @@ const { post } = Astro.props;
           day: 'numeric',
         })
       }
-    </span>
+    </time>
     <span class="text-gray-500 group-hover:text-black transition-colors">
       {post.data.title}
     </span>

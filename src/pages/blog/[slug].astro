@@ -19,25 +19,28 @@ type Props = {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
-// TODO: get plain text from markdown
+// TODO: Get plain text from markdown
 const description = post.body
   .substring(0, 150)
   .replaceAll('\n', ' ')
   .replaceAll('#', '')
   .replaceAll('```', '')
   .trim();
+
+const ISODate = post.data.date.toISOString();
 ---
 
 <Layout
   title={post.data.title + ' - Jsun Blog'}
   description={description}
-  article={{ tags: post.data.tags, date: post.data.date.toISOString() }}
+  article={{ tags: post.data.tags, date: ISODate }}
 >
   <h1 class="text-center font-bold text-3xl">{post.data.title}</h1>
-  <div class="text-center text-gray-400 mb-2 text-sm">
-    {post.data.date.toDateString()} ·
-    {post.data.tags.join(' ')}
+  <div class="block text-center text-gray-400 mb-2 text-sm">
+    <time datetime={ISODate}>{post.data.date.toDateString()}</time>
+    <span> · {post.data.tags.join(' ')}</span>
   </div>
+  <!-- TODO: Add links to headings -->
   <article class="prose max-w-full">
     <Content />
   </article>
