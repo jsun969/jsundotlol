@@ -2,7 +2,9 @@
 import { SEO } from 'astro-seo';
 import 'remixicon/fonts/remixicon.css';
 
-import Link from '../components/Link.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { AVATAR_IMAGE, SITE_NAME, TWITTER_ACCOUNT } from '../constants';
 
 export interface Props {
   title?: string;
@@ -10,11 +12,11 @@ export interface Props {
   article?: { tags: string[]; date: string };
 }
 
-const { title, description = title, article } = Astro.props;
-
-const SEO_IMAGE = 'https://github.com/jsun969.png';
-const SEO_TWITTER_ACCOUNT = '@jsun969';
-const SEO_SITE_NAME = 'Jsun Dot LOL';
+const {
+  title,
+  description = "Justin Sun's personal website",
+  article,
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -24,17 +26,17 @@ const SEO_SITE_NAME = 'Jsun Dot LOL';
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title ? `${title} - ${SEO_SITE_NAME}` : SEO_SITE_NAME}</title>
+    <title>{title ? `${title} - ${SITE_NAME}` : SITE_NAME}</title>
     <SEO
       description={description}
       openGraph={{
         basic: {
-          title: title ?? SEO_SITE_NAME,
+          title: title ?? SITE_NAME,
           type: 'website',
-          image: SEO_IMAGE,
+          image: AVATAR_IMAGE,
         },
         image: { alt: "Justin Sun's avatar" },
-        optional: { description, siteName: SEO_SITE_NAME },
+        optional: { description, siteName: SITE_NAME },
         article: {
           authors: article && ['Justin Sun'],
           publishedTime: article?.date,
@@ -44,9 +46,9 @@ const SEO_SITE_NAME = 'Jsun Dot LOL';
       twitter={{
         title,
         description,
-        image: SEO_IMAGE,
-        site: SEO_TWITTER_ACCOUNT,
-        creator: SEO_TWITTER_ACCOUNT,
+        image: AVATAR_IMAGE,
+        site: TWITTER_ACCOUNT,
+        creator: TWITTER_ACCOUNT,
       }}
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,29 +59,10 @@ const SEO_SITE_NAME = 'Jsun Dot LOL';
     />
   </head>
   <body class="max-w-4xl mx-auto flex flex-col min-h-[100dvh] px-4">
-    <header class="flex gap-4 py-4 sticky top-0 bg-white">
-      <Link href="/" />
-      <Link href="/blog" />
-      <Link href="/about" />
-      <Link href="/friends" class="grow" />
-      <Link href="https://github.com/jsun969">
-        <i class="ri-github-fill"></i>
-      </Link>
-      <Link href="https://twitter.com/jsun969">
-        <i class="ri-twitter-fill"></i>
-      </Link>
-      <Link href="https://discord.gg/Q7xZVtF6pF">
-        <i class="ri-discord-fill"></i>
-      </Link>
-      <Link href="">
-        <i class="ri-rss-fill"></i>
-      </Link>
-    </header>
+    <Header />
     <main class="grow">
       <slot />
     </main>
-    <footer class="text-center text-gray-300 py-2">
-      2020-{new Date().getFullYear()} &copy; Justin Sun
-    </footer>
+    <Footer />
   </body>
 </html>
