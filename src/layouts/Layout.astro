@@ -4,7 +4,12 @@ import 'remixicon/fonts/remixicon.css';
 
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { AVATAR_IMAGE, SITE_NAME, TWITTER_ACCOUNT } from '../constants';
+import {
+  AVATAR_IMAGE,
+  DESCRIPTION,
+  SITE_NAME,
+  TWITTER_ACCOUNT,
+} from '../constants';
 
 export type Props = {
   title?: string;
@@ -12,11 +17,7 @@ export type Props = {
   article?: { tags: string[]; date: string };
 };
 
-const {
-  title,
-  description = "Justin Sun's personal website",
-  article,
-} = Astro.props;
+const { title, description = DESCRIPTION, article } = Astro.props;
 ---
 
 <!DOCTYPE html>
