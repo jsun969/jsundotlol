@@ -5,7 +5,7 @@ import 'remixicon/fonts/remixicon.css';
 import Link from '../components/Link.astro';
 
 export interface Props {
-  title: string;
+  title?: string;
   description?: string;
   article?: { tags: string[]; date: string };
 }
@@ -14,6 +14,7 @@ const { title, description = title, article } = Astro.props;
 
 const SEO_IMAGE = 'https://github.com/jsun969.png';
 const SEO_TWITTER_ACCOUNT = '@jsun969';
+const SEO_SITE_NAME = 'Jsun Dot LOL';
 ---
 
 <!DOCTYPE html>
@@ -23,13 +24,17 @@ const SEO_TWITTER_ACCOUNT = '@jsun969';
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title ? `${title} - ${SEO_SITE_NAME}` : SEO_SITE_NAME}</title>
     <SEO
       description={description}
       openGraph={{
-        basic: { title, type: 'website', image: SEO_IMAGE },
+        basic: {
+          title: title ?? SEO_SITE_NAME,
+          type: 'website',
+          image: SEO_IMAGE,
+        },
         image: { alt: "Justin Sun's avatar" },
-        optional: { description, siteName: 'Jsun Dot LOL' },
+        optional: { description, siteName: SEO_SITE_NAME },
         article: {
           authors: article && ['Justin Sun'],
           publishedTime: article?.date,
@@ -65,6 +70,9 @@ const SEO_TWITTER_ACCOUNT = '@jsun969';
       </Link>
       <Link href="https://discord.gg/Q7xZVtF6pF">
         <i class="ri-discord-fill"></i>
+      </Link>
+      <Link href="">
+        <i class="ri-rss-fill"></i>
       </Link>
     </header>
     <main class="grow">
