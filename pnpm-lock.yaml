@@ -7,6 +7,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.49.0
   '@typescript-eslint/parser': ^5.49.0
   astro: ^2.0.1
+  astro-seo: ^0.7.0
   autoprefixer: ^10.4.13
   clsx: ^1.2.1
   eslint: ^8.32.0
@@ -24,6 +25,7 @@ specifiers:
 dependencies:
   '@astrojs/tailwind': 3.0.0_bgk6wvini4j5nfa7w2itosrqne
   astro: 2.0.1
+  astro-seo: 0.7.0
   clsx: 1.2.1
   remixicon: 2.5.0
   tailwindcss: 3.2.4
@@ -1152,6 +1154,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /astro-seo/0.7.0:
+    resolution: {integrity: sha512-G7zJUr4lfKLeqfWx2g5rfuBsOsIOfqxIOqErQfrMsMchDFfLFxNKAuW8yAo8hynJJwBvtGyS/vOXgGdMVVCFrA==}
+    dev: false
 
   /astro/2.0.1:
     resolution: {integrity: sha512-EXq1lks+ylmArhtUs99PQelK0bQ3VS+698OO9UYkjG08Bd02ficqihsRGBnhEor7U9989hZb+1p4y0rNpgKH8g==}
