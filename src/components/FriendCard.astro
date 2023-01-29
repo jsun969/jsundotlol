@@ -14,7 +14,7 @@ const { friend } = Astro.props;
 <div
   class="p-3 flex flex-col gap-3 bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
 >
-  <div class="flex">
+  <div class="flex gap-2">
     <img
       src={friend?.avatar ?? `https://github.com/${friend.github}.png`}
       alt={friend.github + "'s avatar"}
@@ -36,7 +36,7 @@ const { friend } = Astro.props;
   <div
     class={clsx(
       'flex text-xs underline text-gray-600 dark:text-gray-300',
-      friend?.url ? 'justify-between' : 'justify-center',
+      friend?.website ? 'justify-between' : 'justify-center',
     )}
   >
     <a
@@ -47,13 +47,13 @@ const { friend } = Astro.props;
       <span>{friend.github}</span>
     </a>
     {
-      friend?.url && (
+      friend?.website && (
         <a
-          href={friend.url}
+          href={friend.website}
           class="hover:text-black dark:hover:text-white transition-colors"
         >
           <i class="ri-links-fill align-text-bottom" />
-          <span>{friend?.url}</span>
+          <span>{friend?.website}</span>
         </a>
       )
     }

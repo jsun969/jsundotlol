@@ -17,7 +17,7 @@ export const collections = { blog: blogCollection };
 export const friendSchema = z.object({
   github: z.string(),
   name: z.string(),
-  url: z.string().url().optional(),
+  website: z.string().url().optional(),
   avatar: z.string().url().optional(),
   description: z.string().optional(),
 });
