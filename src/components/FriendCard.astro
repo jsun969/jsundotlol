@@ -1,0 +1,61 @@
+---
+import type { z } from 'astro:content';
+import clsx from 'clsx';
+
+import type { friendSchema } from '../content/config';
+
+export type Props = {
+  friend: z.infer<typeof friendSchema>;
+};
+
+const { friend } = Astro.props;
+---
+
+<div
+  class="p-3 flex flex-col gap-3 bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+>
+  <div class="flex">
+    <img
+      src={friend?.avatar ?? `https://github.com/${friend.github}.png`}
+      alt={friend.github + "'s avatar"}
+      class="w-20 h-20"
+    />
+    <div class="flex flex-col justify-center items-center grow">
+      <div class="font-semibold text-black dark:text-white">
+        {friend.name}
+      </div>
+      {
+        friend?.description && (
+          <div class="text-gray-500 dark:text-gray-400 text-sm">
+            {friend.description}
+          </div>
+        )
+      }
+    </div>
+  </div>
+  <div
+    class={clsx(
+      'flex text-xs underline text-gray-600 dark:text-gray-300',
+      friend?.url ? 'justify-between' : 'justify-center',
+    )}
+  >
+    <a
+      href={'https://github.com/' + friend.github}
+      class="hover:text-black dark:hover:text-white transition-colors"
+    >
+      <i class="ri-github-fill align-text-bottom"></i>
+      <span>{friend.github}</span>
+    </a>
+    {
+      friend?.url && (
+        <a
+          href={friend.url}
+          class="hover:text-black dark:hover:text-white transition-colors"
+        >
+          <i class="ri-links-fill align-text-bottom" />
+          <span>{friend?.url}</span>
+        </a>
+      )
+    }
+  </div>
+</div>

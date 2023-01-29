@@ -13,6 +13,7 @@ specifiers:
   astro: ^2.0.1
   astro-seo: ^0.7.0
   autoprefixer: ^10.4.13
+  clsx: ^1.2.1
   eslint: ^8.32.0
   eslint-config-prettier: ^8.6.0
   eslint-plugin-astro: ^0.23.0
@@ -33,6 +34,7 @@ dependencies:
   '@astrojs/tailwind': 3.0.0_bgk6wvini4j5nfa7w2itosrqne
   astro: 2.0.1
   astro-seo: 0.7.0
+  clsx: 1.2.1
   markdown-it: 13.0.1
   remixicon: 2.5.0
   sanitize-html: 2.8.1
@@ -1516,6 +1518,11 @@ packages:
   /clone/1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/1.9.3:
