@@ -19,4 +19,4 @@ And this blog is powered by [Astro](https://astro.build/) and inspired by [Moshy
 
 It is also open-sourced. You can find the code at <https://github.com/jsun969/jsundotlol>.
 
-I will migrate my previous articles to this blog soon. Thank you for reading my first article at this blog!
+I will migrate my previous articles to this blog soon. Thank you for reading my first article in this blog!
