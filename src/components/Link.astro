@@ -3,11 +3,17 @@ import type { HTMLAttributes } from 'astro/types';
 
 export type Props = HTMLAttributes<'a'>;
 const { ...attrs } = Astro.props;
+
+const removeAllSlash = (path: string) => {
+  return path.replaceAll('/', '');
+};
+const isCurrentPath =
+  removeAllSlash(Astro.url.pathname) === removeAllSlash(`${attrs.href}`);
 ---
 
 <a
   class:list={[
-    Astro.url.pathname === attrs.href
+    isCurrentPath
       ? 'text-black dark:text-white'
       : 'text-gray-400 hover:text-black dark:hover:text-white transition-colors',
   ]}
