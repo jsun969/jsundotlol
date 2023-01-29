@@ -1,0 +1,21 @@
+---
+export type Props = {
+  href: string;
+};
+const { href } = Astro.props;
+
+const removeAllSlash = (path: string) => {
+  return path.replaceAll('/', '');
+};
+const isCurrentPath =
+  removeAllSlash(Astro.url.pathname) === removeAllSlash(`${href}`);
+---
+
+<a
+  href={href}
+  class:list={[
+    isCurrentPath
+      ? 'text-black dark:text-white'
+      : 'text-gray-400 hover:text-black dark:hover:text-white transition-colors',
+  ]}>{Astro.slots.has('default') ? <slot /> : href}</a
+>

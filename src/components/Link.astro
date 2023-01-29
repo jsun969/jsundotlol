@@ -1,23 +1,8 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-
-export type Props = HTMLAttributes<'a'>;
-const { ...attrs } = Astro.props;
-
-const removeAllSlash = (path: string) => {
-  return path.replaceAll('/', '');
+export type Props = {
+  href: string;
 };
-const isCurrentPath =
-  removeAllSlash(Astro.url.pathname) === removeAllSlash(`${attrs.href}`);
+const { href } = Astro.props;
 ---
 
-<a
-  class:list={[
-    isCurrentPath
-      ? 'text-black dark:text-white'
-      : 'text-gray-400 hover:text-black dark:hover:text-white transition-colors',
-  ]}
-  {...attrs}
->
-  {Astro.slots.has('default') ? <slot /> : attrs.href}
-</a>
+<a href={href} class="underline font-bold"><slot /></a>

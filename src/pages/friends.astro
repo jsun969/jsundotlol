@@ -1,6 +1,7 @@
 ---
 import Comment from '../components/Comment.astro';
 import FriendCard from '../components/FriendCard.astro';
+import Link from '../components/Link.astro';
 import { friends } from '../content/config';
 import Layout from '../layouts/Layout.astro';
 import { randomSortArray } from '../utils/randomSortArray';
@@ -12,10 +13,11 @@ import { randomSortArray } from '../utils/randomSortArray';
   </div>
   <div class="my-4 text-sm">
     <span>Want your website to appear here? Just send a PR to</span>
-    <a
+    <Link
       href="https://github.com/jsun969/jsundotlol/blob/main/src/content/_friends.json"
-      class="underline font-bold">this file</a
     >
+      this file
+    </Link>
     <span>or leave a comment below!</span>
   </div>
   <Comment />
