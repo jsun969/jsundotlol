@@ -19,6 +19,7 @@
     "@astrojs/tailwind": "^3.0.0",
     "astro": "^2.0.1",
     "astro-seo": "^0.7.0",
+    "giscus": "^1.2.6",
     "markdown-it": "^13.0.1",
     "remixicon": "^2.5.0",
     "sanitize-html": "^2.8.1",

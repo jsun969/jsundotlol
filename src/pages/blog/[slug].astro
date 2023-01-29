@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 
+import Comment from '../../components/Comment.astro';
 import Layout from '../../layouts/Layout.astro';
 
 export const getStaticPaths = async () => {
@@ -37,4 +38,5 @@ const ISODate = post.data.date.toISOString();
   <article class="prose dark:prose-invert max-w-full">
     <Content />
   </article>
+  <Comment />
 </Layout>
