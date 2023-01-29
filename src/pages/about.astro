@@ -1,7 +1,55 @@
 ---
+import Comment from '../components/Comment.astro';
+import Link from '../components/Link.astro';
 import Layout from '../layouts/Layout.astro';
+
+const lastModifiedDate = new Date('2023-1-30');
 ---
 
 <Layout title="About">
-  <div class="dark:text-white">[WIP] About me</div>
+  <div class="dark:text-white space-y-4">
+    <h1 class="text-4xl font-bold">Hey, there! 👋</h1>
+    <h2 class="text-2xl font-semibold">My name is Justin Sun / 孙烨阳</h2>
+    <p>
+      I am a frontend developer with a passion for
+      <Link href="https://github.com/jsun969">open source</Link>
+      currently based in Shanghai. I like to implement my ideas in code and find
+      the best solution in solving various problems.
+    </p>
+    <p>
+      I use
+      <Link href="https://code.visualstudio.com/">VSCode</Link>
+      as my code editor and like to use
+      <Link href="https://www.typescriptlang.org/">Typescript</Link>
+      and
+      <Link href="https://reactjs.org/">React</Link>
+      for web development. Besides that, I can use many other cutting-edge technology
+      stacks in projects. For instance, I used
+      <Link href="https://astro.build/">Astro</Link>
+      for this website.
+    </p>
+    <p>
+      Besides programming, I like playing video games like
+      <Link href="https://www.minecraft.net/">Minecraft</Link>
+      and
+      <Link href="https://dead-cells.com/">Dead Cells</Link>
+      . But I am not good at FPS games. Feel free to suggest various games to me
+      and hope to play with you!
+    </p>
+    <p>
+      Thank you for reading this post about me. You can add my
+      <Link href="https://discord.gg/Q7xZVtF6pF">discord server</Link>
+      to chat with me. Also check out my
+      <Link href="/blog">blog</Link>
+      to see many posts I have shared on programming and gaming. I hope you will
+      have a good time reading them!
+    </p>
+    <div class="text-end text-sm">
+      Last Modified:
+      <time datetime={lastModifiedDate.toISOString()}>
+        {lastModifiedDate.toDateString()}
+      </time>
+    </div>
+  </div>
+  <Comment />
 </Layout>
