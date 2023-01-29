@@ -1,7 +1,7 @@
 ---
 title: New Blog LOL
 date: 2023-1-29
-tags: ['blog', 'history']
+tags: ['blog', 'history', 'new', 'first']
 language: en
 description: Welcome to my third blog jsun.lol!!!
 ---
@@ -19,4 +19,4 @@ And this blog is powered by [Astro](https://astro.build/) and inspired by [Moshy
 
 It is also open-sourced. You can find the code at <https://github.com/jsun969/jsundotlol>.
 
-I will migrate my previous articles to this blog. Thanks you for reading!
+I will migrate my previous articles to this blog soon. Thank you for reading my first article at this blog!
