@@ -17,5 +17,18 @@
     "avatar": "https://source.catrol.cn/icons/headIcon.jpg",
     "github": "Dynesshely",
     "description": "高中小菜鸡，喜欢编程，打游戏以及学习（不是）"
+  },
+  {
+    "name": "Moshyfawn's Corner",
+    "website": "https://moshyfawn.dev",
+    "github": "Moshyfawn",
+    "description": "An all things moshyfawn place on the Internet; primarily related but not limited to programming"
+  },
+  {
+    "name": "江村暮的博客",
+    "website": "https://rene.wang",
+    "avatar": "https://rene.wang/Memoji_square.png",
+    "github": "RiverTwilight",
+    "description": "开发日志、技术文章以及生活随感"
   }
 ]
