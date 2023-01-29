@@ -1,22 +1,17 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import { getCollection } from 'astro:content';
+import { getEntryBySlug } from 'astro:content';
 
 import Comment from '../../components/Comment.astro';
 import Layout from '../../layouts/Layout.astro';
 
-export const getStaticPaths = async () => {
-  const blogPosts = await getCollection('blog');
-  return blogPosts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
-};
+const { slug } = Astro.params;
+const post = (await getEntryBySlug('blog', slug!))!;
 
-export type Props = {
-  post: CollectionEntry<'blog'>;
-};
-const { post } = Astro.props;
+// FIXME: Check if the post can be found
+// if (!post) {
+//   return Astro.redirect('/404');
+// }
+
 const { Content } = await post.render();
 
 const ISODate = post.data.date.toISOString();
