@@ -5,8 +5,8 @@ import 'remixicon/fonts/remixicon.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import {
-  AVATAR_IMAGE,
   DESCRIPTION,
+  HEADER_IMAGE,
   SITE_NAME,
   TWITTER_ACCOUNT,
 } from '../constants';
@@ -34,9 +34,9 @@ const { title, description = DESCRIPTION, article } = Astro.props;
         basic: {
           title: title ?? SITE_NAME,
           type: 'website',
-          image: AVATAR_IMAGE,
+          image: HEADER_IMAGE,
         },
-        image: { alt: "Justin Sun's avatar" },
+        image: { alt: 'Jsun Dot LOL Header Image' },
         optional: { description, siteName: SITE_NAME },
         article: {
           authors: article && ['Justin Sun'],
@@ -47,7 +47,8 @@ const { title, description = DESCRIPTION, article } = Astro.props;
       twitter={{
         title,
         description,
-        image: AVATAR_IMAGE,
+        card: 'summary_large_image',
+        image: HEADER_IMAGE,
         site: TWITTER_ACCOUNT,
         creator: TWITTER_ACCOUNT,
       }}
