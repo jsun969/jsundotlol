@@ -31,7 +31,7 @@ const ISODate = post.data.date.toISOString();
   </h1>
   <div class="block text-center text-gray-400 mb-2 text-sm mt-2">
     <time datetime={ISODate}>{post.data.date.toDateString()}</time>
-    <span> · {post.data.tags.join(' ')}</span>
+    <span> / {post.data.tags.join(' · ')}</span>
   </div>
   <!-- TODO: Add links to headings -->
   <article class="prose dark:prose-invert max-w-full">
