@@ -1,6 +1,5 @@
 ---
 import type { z } from 'astro:content';
-import clsx from 'clsx';
 
 import type { friendSchema } from '../content/config';
 
@@ -34,10 +33,10 @@ const { friend } = Astro.props;
     </div>
   </div>
   <div
-    class={clsx(
+    class:list={[
       'flex text-xs underline text-gray-600 dark:text-gray-300',
       friend?.website ? 'justify-between' : 'justify-center',
-    )}
+    ]}
   >
     <a
       href={'https://github.com/' + friend.github}
