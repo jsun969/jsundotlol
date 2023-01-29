@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 
-import friendsJson from './friends.json';
+import friendsJson from './_friends.json';
 
 const blogCollection = defineCollection({
   schema: z.object({
