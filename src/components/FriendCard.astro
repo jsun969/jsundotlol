@@ -34,7 +34,7 @@ const { friend } = Astro.props;
   </div>
   <div
     class:list={[
-      'flex text-xs underline text-gray-600 dark:text-gray-300',
+      'flex text-xs underline text-gray-600 dark:text-gray-300 gap-1',
       friend?.website ? 'justify-between' : 'justify-center',
     ]}
   >
@@ -52,7 +52,7 @@ const { friend } = Astro.props;
           class="hover:text-black dark:hover:text-white transition-colors"
         >
           <i class="ri-links-fill align-text-bottom" />
-          <span>{friend?.website}</span>
+          <span>{friend.website.substring(8)}</span>
         </a>
       )
     }
