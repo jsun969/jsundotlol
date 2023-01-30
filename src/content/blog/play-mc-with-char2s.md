@@ -1,9 +1,9 @@
 ---
-title: Play Minecraft with Char2s
-date: 2023-1-30
+title: 'Play Minecraft with Char2s'
+date: '2023-1-30'
 tags: ['game', 'minecraft', 'survival']
-language: en
-description: Some screenshots of playing Minecraft 1.19.3 with Char2s
+language: 'en'
+description: 'Some screenshots of playing Minecraft 1.19.3 with Char2s'
 ---
 
 New House (I am the black one)

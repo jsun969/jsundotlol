@@ -1,9 +1,9 @@
 ---
-title: New Blog LOL
-date: 2023-1-29
-tags: ['blog', 'history', 'new', 'first']
-language: en
-description: Welcome to my third blog jsun.lol!!!
+title: 'New Blog LOL'
+date: '2023-1-29'
+tags: ['website', 'blog', 'new', 'first']
+language: 'en'
+description: 'Welcome to my third blog jsun.lol!!!'
 ---
 
 Hey there. Welcome to **Jsun Dot LOL**. This is my third online blog!
