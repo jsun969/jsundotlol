@@ -42,7 +42,7 @@ const { friend } = Astro.props;
       href={'https://github.com/' + friend.github}
       class="hover:text-black dark:hover:text-white transition-colors"
     >
-      <i class="ri-github-fill align-text-bottom"></i>
+      <i class="ri-github-fill"></i>
       <span>{friend.github}</span>
     </a>
     {
@@ -51,8 +51,8 @@ const { friend } = Astro.props;
           href={friend.website}
           class="hover:text-black dark:hover:text-white transition-colors"
         >
-          <i class="ri-links-fill align-text-bottom" />
-          <span>{friend.website.substring(8)}</span>
+          <i class="ri-links-fill" />
+          <span>{friend.website.replace('https://', '')}</span>
         </a>
       )
     }
