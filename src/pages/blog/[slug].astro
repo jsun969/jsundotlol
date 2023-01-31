@@ -21,6 +21,7 @@ const ISODate = post.data.date.toISOString();
   title={post.data.title}
   description={post.data.description}
   article={{ tags: post.data.tags, date: ISODate }}
+  language={post.data.language}
 >
   <h1 class="text-center font-bold text-4xl dark:text-white">
     {post.data.title}
