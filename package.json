@@ -14,10 +14,10 @@
     "lint": "eslint \"**/*.{js,ts,tsx,astro}\" --fix"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^6.1.0",
     "@astrojs/rss": "^2.1.0",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^3.0.0",
+    "@astrojs/vercel": "^3.0.0",
     "astro": "^2.0.2",
     "astro-seo": "^0.7.0",
     "giscus": "^1.2.6",
