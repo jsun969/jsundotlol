@@ -17,6 +17,7 @@
     "@astrojs/rss": "^2.1.0",
     "@astrojs/tailwind": "^3.0.0",
     "@astrojs/vercel": "^3.0.0",
+    "@vercel/analytics": "^0.1.8",
     "astro": "^2.0.2",
     "astro-seo": "^0.7.0",
     "giscus": "^1.2.6",
