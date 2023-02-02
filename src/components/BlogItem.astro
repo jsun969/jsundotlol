@@ -8,7 +8,11 @@ export type Props = {
 const { post } = Astro.props;
 ---
 
-<a class="group cursor-pointer block w-fit mb-4" href={'/blog/' + post.slug}>
+<a
+  class="group cursor-pointer block w-fit mb-4"
+  href={'/blog/' + post.slug}
+  title={post.data.description}
+>
   <div class="text-2xl">
     <time
       datetime={post.data.date.toISOString()}
