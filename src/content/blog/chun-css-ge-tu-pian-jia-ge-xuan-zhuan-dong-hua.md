@@ -41,7 +41,7 @@ img.turnAround:hover {
 但是不能让他**直接旋转**，得有个**动画过程**，所以**加**上
 
 ```css
-\-webkit-transition: all 1.5s ease-in-out;
+-webkit-transition: all 1.5s ease-in-out;
 -moz-transition: all 1.5s ease-in-out;
 -o-transition: all 1.5s ease-in-out;
 -ms-transition: all 1.5s ease-in-out;

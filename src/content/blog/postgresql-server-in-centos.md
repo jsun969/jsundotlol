@@ -64,13 +64,13 @@ sudo -u postgres psql
 
 设置密码(psql 中输入)
 
-```plain
+```
 \password <用户名>
 ```
 
 退出 psql
 
-```plain
+```
 \q
 ```
 
@@ -84,7 +84,7 @@ sudo -u postgres psql
 
 开启远程连接和设置端口
 
-```plain
+```
 listen_addresses = '*'
 port = <端口>
 ```
@@ -93,7 +93,7 @@ port = <端口>
 
 允许远程访问
 
-```plain
+```
 host all all 0.0.0.0/0 md5
 ```
 

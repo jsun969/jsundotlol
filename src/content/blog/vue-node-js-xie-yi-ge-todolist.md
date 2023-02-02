@@ -51,7 +51,7 @@ GitHub: <https://github.com/jsun969/real-todolist>
 ```css
 .card {
   margin-bottom: 10px;
-  .el-card\_\_body {
+  .el-card__body {
     height: 80.5px;
     width: 100%;
     display: flex;
