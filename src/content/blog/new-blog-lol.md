@@ -1,7 +1,7 @@
 ---
 title: 'New Blog LOL'
 date: '2023-1-29'
-tags: ['website', 'blog', 'new', 'first']
+tags: ['website', 'blog', 'intro']
 language: 'en'
 description: 'Welcome to my third blog jsun.lol!!!'
 ---

@@ -1,7 +1,7 @@
 ---
 title: '寒假作业: VB 闹钟'
 date: '2021-01-23'
-tags: ['study', 'code', 'visual basic', 'homework']
+tags: ['code', 'visual basic', 'homework']
 language: 'zh-cn'
 description: 'from 螓首蛾眉'
 ---
