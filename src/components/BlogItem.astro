@@ -16,7 +16,7 @@ const { post } = Astro.props;
   <div class="text-2xl">
     <time
       datetime={post.data.date.toISOString()}
-      class="text-gray-400 font-light mr-4 group-hover:text-gray-800 dark:group-hover:text-gray-50 transition-colors"
+      class="inline-block w-[5.5rem] text-gray-400 font-light group-hover:text-gray-800 dark:group-hover:text-gray-50 transition-colors"
     >
       {
         post.data.date.toLocaleDateString('en', {
