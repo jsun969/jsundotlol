@@ -1,5 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const zeroOrOne = () => {
+  return Math.round(Math.random());
+};
+
+const lol =
+  ['L', 'l'][zeroOrOne()] + ['O', 'o'][zeroOrOne()] + ['L', 'l'][zeroOrOne()];
 ---
 
 <Layout>
@@ -8,11 +15,7 @@ import Layout from '../layouts/Layout.astro';
     <span
       class="font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-[#ff5ef7] to-[#02f5ff]"
     >
-      {
-        ['L', 'l'][Math.round(Math.random())] +
-          ['O', 'o'][Math.round(Math.random())] +
-          ['L', 'l'][Math.round(Math.random())]
-      }
+      {lol}
     </span>
   </h1>
 </Layout>
