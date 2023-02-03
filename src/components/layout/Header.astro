@@ -1,15 +1,12 @@
 ---
+import { basePages } from '../../sitemap';
 import HeaderLink from './HeaderLink.astro';
 ---
 
 <header
   class="flex gap-2 text-sm sm:text-base sm:gap-6 py-4 sticky top-0 bg-white dark:bg-black"
 >
-  <HeaderLink href="/" />
-  <HeaderLink href="/blog" />
-  <HeaderLink href="/tags" />
-  <HeaderLink href="/about" />
-  <HeaderLink href="/friends" />
+  {basePages.map((link) => <HeaderLink href={link} />)}
   <div class="grow"></div>
   <HeaderLink href="https://github.com/jsun969">
     <i class="ri-github-fill"></i>
