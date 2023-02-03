@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+
+import Layout from '../layouts/Layout.astro';
+
+const posts = await getCollection('blog');
+const tagsCount = posts
+  .map(({ data: { tags } }) => tags)
+  .flat()
+  .reduce((prev, tag) => {
+    if (!prev[tag]) {
+      prev[tag] = 0;
+    }
+    prev[tag]++;
+    return prev;
+  }, {} as Record<string, number>);
+---
+
+<Layout title="Tags">
+  <div class="flex gap-2 flex-wrap">
+    {
+      Object.keys(tagsCount)
+        .sort((a, b) => tagsCount[b] - tagsCount[a])
+        .map((tag) => (
+          <a
+            class="block px-3 py-2 bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 text-black dark:text-white transition-colors"
+            href={'/blog?tag=' + tag}
+          >
+            <span>{tag}</span>
+            <span class="font-bold">
+              {tagsCount[tag] > 1 && tagsCount[tag]}
+            </span>
+          </a>
+        ))
+    }
+  </div>
+</Layout>

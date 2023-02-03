@@ -28,7 +28,19 @@ const ISODate = post.data.date.toISOString();
   </h1>
   <div class="block text-center text-gray-400 mb-2 text-sm mt-2">
     <time datetime={ISODate}>{post.data.date.toDateString()}</time>
-    <span> - {post.data.tags.join(' · ')}</span>
+    <span>-</span>
+    <span>
+      {
+        post.data.tags.map((tag) => (
+          <a
+            class="hover:text-gray-300 dark:hover:text-gray-500 transition-colors"
+            href={'/blog?tag=' + tag}
+          >
+            {tag}
+          </a>
+        ))
+      }
+    </span>
   </div>
   <article
     class="prose dark:prose-invert max-w-full prose-a:prose-headings:decoration-transparent hover:prose-a:prose-headings:decoration-black prose-a:prose-headings:transition-colors"

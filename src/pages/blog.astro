@@ -4,12 +4,23 @@ import { getCollection } from 'astro:content';
 import BlogItem from '../components/blog/BlogItem.astro';
 import Layout from '../layouts/Layout.astro';
 
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
-);
+const tag = Astro.url.searchParams.get('tag');
+
+const posts = (
+  await getCollection('blog', ({ data: { tags } }) =>
+    tag ? tags.includes(tag) : true,
+  )
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <Layout title="Blog">
+  {
+    tag && (
+      <h1 class="text-4xl sm:text-8xl font-extrabold text-gray-300 dark:text-gray-700 text-right uppercase select-none">
+        {tag}
+      </h1>
+    )
+  }
   {
     posts.map((post, i) => (
       <>
