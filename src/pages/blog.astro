@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
-import BlogItem from '../components/BlogItem.astro';
+import BlogItem from '../components/blog/BlogItem.astro';
 import Layout from '../layouts/Layout.astro';
 
 const posts = (await getCollection('blog')).sort(
