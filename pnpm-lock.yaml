@@ -19,6 +19,7 @@ specifiers:
   eslint-config-prettier: ^8.6.0
   eslint-plugin-astro: ^0.23.0
   eslint-plugin-prettier: ^4.2.1
+  fast-glob: ^3.2.12
   giscus: ^1.2.6
   lint-staged: ^13.1.0
   markdown-it: ^13.0.1
@@ -41,6 +42,7 @@ dependencies:
   '@vercel/analytics': 0.1.8
   astro: 2.0.6
   astro-seo: 0.7.0
+  fast-glob: 3.2.12
   giscus: 1.2.6
   markdown-it: 13.0.1
   rehype-autolink-headings: 6.1.1
