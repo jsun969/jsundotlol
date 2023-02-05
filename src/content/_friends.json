@@ -70,5 +70,10 @@
     "description": "所谓自由就是可以说二加二等于四的自由",
     "avatar": "https://y.suemor.com/images89030875.jpeg",
     "github": "suemor"
+  },
+  {
+    "name": "Tobias Nielsen",
+    "github": "getTobiasNielsen",
+    "description": "Love rust, typescript, cloud, backends & security."
   }
 ]
