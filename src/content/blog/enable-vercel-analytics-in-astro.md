@@ -8,7 +8,7 @@ tags: ['code', 'vercel', 'analytics', 'astro']
 
 Astro has its [Vercel integration](https://docs.astro.build/en/guides/integrations-guide/vercel/). But it hasn't provided any option to enable analytics yet. So we need to add some scripts for it manually.
 
-I have created a [feature discussion](https://github.com/withastro/roadmap/discussions/467) for integration. But I don't have enough ability to create a PR for it. Hope this post can help it get integrated.
+_I have created a [feature discussion](https://github.com/withastro/roadmap/discussions/467) for integration. But I don't have enough ability to create a PR for it. Hope this post can help it get integrated._
 
 ## Example
 
