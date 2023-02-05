@@ -66,7 +66,7 @@
   },
   {
     "name": "SuemorのBlog",
-    "website": "https://www.suemor.com/",
+    "website": "https://www.suemor.com",
     "description": "所谓自由就是可以说二加二等于四的自由",
     "avatar": "https://y.suemor.com/images89030875.jpeg",
     "github": "suemor"
@@ -79,7 +79,7 @@
   {
     "github": "AkaraChen",
     "name": "AkaraChen",
-    "website": "akr.moe",
+    "website": "https://akr.moe",
     "description": "位于互联网边缘的小站"
   }
 ]
