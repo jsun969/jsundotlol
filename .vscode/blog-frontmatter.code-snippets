@@ -1,0 +1,16 @@
+{
+  "Blog Frontmatter": {
+    "scope": "markdown",
+    "prefix": "fm",
+    "body": [
+      "---",
+      "title: '$1'",
+      "description: '$2'",
+      "date: '$3'",
+      "language: '$4'",
+      "tags: ['$5']",
+      "---"
+    ],
+    "description": "Add frontmatter before blog post"
+  }
+}

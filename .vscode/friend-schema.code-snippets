@@ -1,0 +1,15 @@
+{
+  "Friend Schema": {
+    "scope": "json",
+    "prefix": "nf",
+    "body": [
+      "{",
+      "  \"github\": \"$1\",",
+      "  \"name\": \"$2\",",
+      "  \"website\": \"$3\",",
+      "  \"avatar\": \"$4\",",
+      "  \"description\": \"$5\"",
+      "}"
+    ]
+  }
+}
