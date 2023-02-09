@@ -13,7 +13,7 @@ export default defineConfig({
   site: SITE,
   integrations: [tailwind(), sitemap({ customPages: pages })],
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({ analytics: true }),
   markdown: {
     rehypePlugins: [
       rehypeSlug,

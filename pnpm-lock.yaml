@@ -4,7 +4,7 @@ specifiers:
   '@astrojs/rss': ^2.1.0
   '@astrojs/sitemap': ^1.0.1
   '@astrojs/tailwind': ^3.0.0
-  '@astrojs/vercel': ^3.0.0
+  '@astrojs/vercel': ^3.1.0
   '@tailwindcss/typography': ^0.5.9
   '@trivago/prettier-plugin-sort-imports': ^4.0.0
   '@types/markdown-it': ^12.2.3
@@ -12,7 +12,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.49.0
   '@typescript-eslint/parser': ^5.49.0
   '@vercel/analytics': ^0.1.8
-  astro: ^2.0.3
+  astro: ^2.0.6
   astro-seo: ^0.7.0
   autoprefixer: ^10.4.13
   eslint: ^8.32.0
@@ -30,7 +30,7 @@ specifiers:
   remixicon: ^2.5.0
   sanitize-html: ^2.8.1
   simple-git-hooks: ^2.8.1
-  tailwindcss: ^3.0.24
+  tailwindcss: ^3.2.4
   typescript: ^4.9.4
   web-vitals: ^3.1.1
 
@@ -38,7 +38,7 @@ dependencies:
   '@astrojs/rss': 2.1.0
   '@astrojs/sitemap': 1.0.1
   '@astrojs/tailwind': 3.0.0_jiulpwjund37q6yckwlgwo54mu
-  '@astrojs/vercel': 3.0.0_astro@2.0.6
+  '@astrojs/vercel': 3.1.0_astro@2.0.6
   '@vercel/analytics': 0.1.8
   astro: 2.0.6
   astro-seo: 0.7.0
@@ -179,18 +179,21 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vercel/3.0.0_astro@2.0.6:
-    resolution: {integrity: sha512-fzoa8C0AbiLNkAkTZV4wIEdqaE/U99x0mFSHgA3SV2OwWszch29l8pQMnLUHXTXVy1OwmNba4QRm1B8hkPwo9g==}
+  /@astrojs/vercel/3.1.0_astro@2.0.6:
+    resolution: {integrity: sha512-cwZuaFBtAa8fsAd3yFDmxmOx1+PTphXh1TaivNB9XyPT5oQAlxEz7M43nPSKTUVc7CoCIsTYWnG1b06D5TuJhw==}
     peerDependencies:
-      astro: ^2.0.0
+      astro: ^2.0.9
     dependencies:
       '@astrojs/webapi': 2.0.0
+      '@vercel/analytics': 0.1.8
       '@vercel/nft': 0.22.6
       astro: 2.0.6
       fast-glob: 3.2.12
       set-cookie-parser: 2.5.1
+      web-vitals: 3.1.1
     transitivePeerDependencies:
       - encoding
+      - react
       - supports-color
     dev: false
 
