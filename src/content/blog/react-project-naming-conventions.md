@@ -6,7 +6,7 @@ language: 'zh-cn'
 tags: ['code', 'react', 'naming', 'convention']
 ---
 
-## 2023-2-7 更
+## 2023-02-07 更
 
 此文内容已过时，目前更推荐参考：<https://github.com/alan2207/bulletproof-react>
 
