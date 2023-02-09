@@ -6,9 +6,27 @@ language: 'en'
 tags: ['code', 'vercel', 'analytics', 'astro']
 ---
 
+## 2023-02-09 Update
+
+This feature [has been added](https://github.com/withastro/astro/pull/6148) to vercel integration by me. Just enable it in Astro Config.
+
+`astro.config.mjs`
+
+```js
+import vercel from '@astrojs/vercel/serverless';
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  output: 'server',
+  adapter: vercel({ analytics: true }),
+});
+```
+
+---
+
 Astro has its [Vercel integration](https://docs.astro.build/en/guides/integrations-guide/vercel/). But it hasn't provided any option to enable analytics yet. So we need to add some scripts for it manually.
 
-_I have created a [feature discussion](https://github.com/withastro/roadmap/discussions/467) for integration. But I don't have enough ability to create a PR for it. Hope this post can help it get integrated._
+~~I have created a [feature discussion](https://github.com/withastro/roadmap/discussions/467) for integration. But I don't have enough ability to create a PR for it. Hope this post can help it get integrated.~~
 
 ## Example
 
