@@ -8,11 +8,7 @@ tags: ['code', 'react-hook-form', 'antd', 'oss', 'tutorial']
 
 ## 前言
 
-先解释一下标题。我想 Ant Design 这个组件库一定是被每个 React 程序员所熟知的。作为一款由阿里背书的前端组件库，其在做后台管理等业务，尤其方便。
-
-但是 React Hook Form 这个库，可能在国内并没有那么火。尽管 Ant Design 拥有自己的 `Form` 组件，但是 React Hook Form 是一个非常优秀的表单处理库
-
-其优点在于：
+先解释一下标题。 Ant Design 大家应该非常熟悉了，但是 React Hook Form 可能在国内并没有那么火。尽管 Ant Design 拥有自己的 `Form` 组件，不过 React Hook Form 也有其优势：
 
 1. 强性能，减少渲染次数
 2. 轻量无依赖
