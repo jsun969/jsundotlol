@@ -3,7 +3,7 @@ title: '如何在 Ant Design 中使用 React Hook Form?'
 description: '可能是 React Hook Form 和 Ant Design 的最佳实践'
 date: '2023-4-16'
 language: 'zh-cn'
-tags: ['code', 'react-hook-form', 'antd', 'oss', 'tutorial']
+tags: ['code', 'react', 'react-hook-form', 'antd', 'oss', 'tutorial']
 ---
 
 ## 前言
