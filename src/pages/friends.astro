@@ -12,18 +12,17 @@ import { randomSortArray } from '../utils/randomSortArray';
     <span
       class="text-xs font-bold text-white dark:text-black bg-black dark:bg-white pl-[3px] mr-2"
     >
-      RANDOM ORDER
+      BABABABABANANA
     </span>
-    <span>Want your website to appear here? Just send a PR to</span>
-    <Link
+    <span>Some of my projects</span>
+    <!-- <Link
       href="https://github.com/jsun969/jsundotlol/blob/main/src/content/_friends.json"
     >
-      this file
-    </Link>
-    <span>or leave a comment below!</span>
+    </Link> -->
+    <!-- <span>or leave a comment below!</span> -->
   </div>
   <div class="grid sm:grid-cols-3 gap-4 sm:gap-2">
     {randomSortArray(friends).map((friend) => <FriendCard friend={friend} />)}
   </div>
-  <Comment />
+  <!-- <Comment /> -->
 </Layout>

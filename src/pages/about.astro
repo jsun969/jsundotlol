@@ -3,53 +3,30 @@ import Comment from '../components/Comment.astro';
 import Link from '../components/Link.astro';
 import Layout from '../layouts/Layout.astro';
 
-const lastModifiedDate = new Date('2023-2-5');
+const lastModifiedDate = new Date('2023-12-1');
 ---
 
 <Layout title="About">
   <div class="dark:text-white space-y-4">
-    <h1 class="text-4xl font-bold">Hey, there! 👋</h1>
-    <h2 class="text-xl font-semibold">My name is Justin Sun / 孙烨阳</h2>
-    <p>
-      I am a frontend developer with a passion for
-      <Link href="https://github.com/jsun969">open source</Link>
-      from Shanghai. I love implementing my ideas in code and finding the best solution
-      in solving various problems.
-    </p>
-    <p>
-      I use
-      <Link href="https://code.visualstudio.com/">VSCode</Link>
-      as my code editor and like to use
-      <Link href="https://www.typescriptlang.org/">Typescript</Link>
-      and
-      <Link href="https://reactjs.org/">React</Link>
-      for web development. Besides that, I can use many other cutting-edge technology
-      stacks in projects. For instance, I used
-      <Link href="https://astro.build/">Astro</Link>
-      for this website.
-    </p>
-    <p>
-      Besides programming, I like playing video games like
-      <Link href="https://www.minecraft.net/">Minecraft</Link>
-      and
-      <Link href="https://dead-cells.com/">Dead Cells</Link>
-      . While I am not good at FPS games. Feel free to suggest various games to me
-      and hope to play with you!
-    </p>
-    <p>
-      Thank you for reading this post about me. You can add my
-      <Link href="https://discord.gg/Q7xZVtF6pF">discord server</Link>
-      to chat with me. Also, check out my
-      <Link href="/blog">blog</Link>
-      to see many posts I have shared on programming and gaming. I hope you will
-      have a good time reading them!
-    </p>
-    <div class="text-end text-sm">
-      Last Modified:
+    <h1 class="text-4xl font-bold">Best Wishes🌞</h1>
+    <h2 class="text-xl font-semibold">Im nobody</h2>
+    <img src="" alt="" />
+    <h2 class="text-xl font-semibold">
+      You are my today and all of my tomorrows
+    </h2>
+    <img
+      src="https://seconbucket-qiaozhiqian.oss-cn-shanghai.aliyuncs.com/img-picgo/Snipaste_2023-12-01_16-46-09.png"
+      alt=""
+      style="width:300px height:300px"
+    />
+    <div class="text-end text-sm" style="font-family: -apple-system">
+      最后编辑时间&nbsp;:&nbsp;&nbsp;
+      <!-- 时间 -->
       <time datetime={lastModifiedDate.toISOString()}>
         {lastModifiedDate.toDateString()}
       </time>
     </div>
   </div>
   <Comment />
+  <!-- Github评论 -->
 </Layout>
