@@ -1,4 +1,4 @@
-export const SITE = 'https://';
+export const SITE = 'https://jsun.lol';
 export const HEADER_IMAGE = SITE + '/header.png';
 export const SITE_NAME = 'Three Kids';
 export const TWITTER_ACCOUNT = '@LangS';
