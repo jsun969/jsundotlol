@@ -12,13 +12,6 @@
     "description": "Fight together!!"
   },
   {
-    "name": "调皮豆干",
-    "website": "https://blog.catrol.cn",
-    "avatar": "https://source.catrol.cn/icons/headIcon.jpg",
-    "github": "Dynesshely",
-    "description": "高中小菜鸡，喜欢编程，打游戏以及学习（不是）"
-  },
-  {
     "name": "Moshyfawn's Corner",
     "website": "https://moshyfawn.dev",
     "github": "Moshyfawn",
@@ -87,5 +80,11 @@
     "website": "https://cali.so",
     "github": "CaliCastle",
     "description": "开发者、设计师、细节控、创始人"
+  },
+  {
+    "name": "Will",
+    "website": "https://cuvii.dev",
+    "github": "thecuvii",
+    "description": "伟神！"
   }
 ]
