@@ -7,6 +7,7 @@ import HeaderLink from './HeaderLink.astro';
   class="flex gap-2 text-sm sm:text-base sm:gap-6 py-4 sticky top-0 bg-white dark:bg-black"
 >
   {basePages.map((link) => <HeaderLink href={link} />)}
+  <HeaderLink href="/resume.pdf">/resume</HeaderLink>
   <div class="grow"></div>
   <HeaderLink href="https://github.com/jsun969">
     <i class="ri-github-fill"></i>
