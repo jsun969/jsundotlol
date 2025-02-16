@@ -4,21 +4,27 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header
-  class="flex gap-2 text-sm sm:text-base sm:gap-6 py-4 sticky top-0 bg-white dark:bg-black"
+  class="flex flex-col sm:flex-row sm:justify-between sm:gap-6 py-4 sticky top-0 bg-white dark:bg-black"
 >
-  {basePages.map((link) => <HeaderLink href={link} />)}
-  <HeaderLink href="/resume.pdf">/resume</HeaderLink>
-  <div class="grow"></div>
-  <HeaderLink href="https://github.com/jsun969">
-    <i class="ri-github-fill"></i>
-  </HeaderLink>
-  <HeaderLink href="https://twitter.com/jsun969">
-    <i class="ri-twitter-fill"></i>
-  </HeaderLink>
-  <HeaderLink href="https://discord.gg/Q7xZVtF6pF">
-    <i class="ri-discord-fill"></i>
-  </HeaderLink>
-  <HeaderLink href="/blog.xml">
-    <i class="ri-rss-fill"></i>
-  </HeaderLink>
+  <div class="flex justify-between sm:gap-4">
+    {basePages.map((link) => <HeaderLink href={link} />)}
+    <HeaderLink href="/resume.pdf">/resume</HeaderLink>
+  </div>
+  <div class="flex justify-between text-3xl sm:text-xl sm:gap-4">
+    <HeaderLink href="https://github.com/jsun969">
+      <i class="ri-github-fill"></i>
+    </HeaderLink>
+    <HeaderLink href="https://twitter.com/jsun969">
+      <i class="ri-twitter-fill"></i>
+    </HeaderLink>
+    <HeaderLink href="https://discord.gg/Q7xZVtF6pF">
+      <i class="ri-discord-fill"></i>
+    </HeaderLink>
+    <HeaderLink href="https://www.linkedin.com/in/jsun969">
+      <i class="ri-linkedin-box-fill"></i>
+    </HeaderLink>
+    <HeaderLink href="/blog.xml">
+      <i class="ri-rss-fill"></i>
+    </HeaderLink>
+  </div>
 </header>
