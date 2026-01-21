@@ -1,0 +1,59 @@
+@font-face {
+	font-family: 'monaspace-argon';
+	src: url('./assets/fonts/monaspace_argon_var.woff2') format('woff2'),
+		url('./assets/fonts/monaspace_argon_var.woff') format('woff');
+}
+
+.title-letter__name {
+	animation-name: switch-title__name;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	opacity: 10%;
+}
+
+.title-letter__website {
+	animation-name: switch-title__website;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+}
+
+.title-letter__none {
+	opacity: 10%;
+}
+
+/* Show 3s, hide 1s */
+/* FIXME: The opacity with 10% goes first */
+@keyframes switch-title__website {
+	0% {
+		opacity: 100%;
+	}
+	8.3% {
+		opacity: 10%;
+	}
+	50% {
+		opacity: 10%;
+	}
+	58.3% {
+		opacity: 100%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+@keyframes switch-title__name {
+	0% {
+		opacity: 10%;
+	}
+	8.3% {
+		opacity: 100%;
+	}
+	50% {
+		opacity: 100%;
+	}
+	58.3% {
+		opacity: 10%;
+	}
+	100% {
+		opacity: 10%;
+	}
+}
