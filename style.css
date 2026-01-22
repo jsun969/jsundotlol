@@ -5,10 +5,10 @@
 }
 
 .title-letter__name {
+	opacity: 10%;
 	animation-name: switch-title__name;
 	animation-duration: 12s;
 	animation-iteration-count: infinite;
-	opacity: 10%;
 }
 
 .title-letter__website {
